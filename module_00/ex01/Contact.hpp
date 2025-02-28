@@ -18,7 +18,6 @@ class Contact
 		void set_nick_name(const std::string &n_name);
 		void set_phone_number(const std::string &p_number);
 		void set_darkest_secret(const std::string &d_secret);
-        int isalpha_str(const std::string &name);
 
     private:
         std::string first_name;

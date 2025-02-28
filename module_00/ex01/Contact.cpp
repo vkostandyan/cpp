@@ -55,12 +55,12 @@ void Contact::set_darkest_secret(const std::string &d_secret)
 	this->darkest_secret = d_secret;
 }
 
-int isalpha_str(const std::string &name)
-{
-	for (int i = 0; name[i]; i++)
-	{
-		if(!isalpha(name[i]))
-			return(0);
-	}
-	return(1);
-}
+// int isalpha_str(const std::string &name)
+// {
+// 	for (int i = 0; name[i]; i++)
+// 	{
+// 		if(!isalpha(name[i]))
+// 			return(0);
+// 	}
+// 	return(1);
+// }

@@ -14,7 +14,7 @@ int main(int argc, char **argv)
         std::cout << "Invalid file name!" << std::endl;
         return (1);
     }
-    std::ofstream outfile("bratan.txt");
+    std::ofstream outfile((std::string)argv[1] + ".replace");
     if (!outfile.is_open())
     {
         std::cout << "Cannot create new file!" << std::endl;

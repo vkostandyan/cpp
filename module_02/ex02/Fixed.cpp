@@ -22,7 +22,7 @@ Fixed::Fixed(const float number)
 
 Fixed &Fixed::operator=(const Fixed &fixed)
 {
-    if (this == fixed)
+    if (*this == fixed)
         return (*this);
     this->fixed_point_nb = fixed.getRawBits();
     return (*this);

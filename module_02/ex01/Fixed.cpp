@@ -27,6 +27,8 @@ Fixed::Fixed(const float number)
 Fixed &Fixed::operator=(const Fixed &fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;
+    if (this == fixed)
+        return (*this);
     this->fixed_point_nb = fixed.getRawBits();
     return (*this);
 }

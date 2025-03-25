@@ -1,4 +1,4 @@
-NAME = claptrap
+NAME = scavtrap
 
 CPPFLAGS = -Wall -Wextra -Werror \
 	-std=c++98 #-fsanitize=address

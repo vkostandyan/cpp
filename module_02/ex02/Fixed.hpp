@@ -14,17 +14,17 @@ class Fixed
         Fixed &operator=(const Fixed &fixed);
         ~Fixed();
 
-        bool operator>(const Fixed& other);
-        bool operator<(const Fixed& other);
-        bool operator>=(const Fixed& other);
-        bool operator<=(const Fixed& other);
-        bool operator==(const Fixed& other);
-        bool operator!=(const Fixed& other);
+        bool operator>(const Fixed& other) const;
+        bool operator<(const Fixed& other) const;
+        bool operator>=(const Fixed& other) const;
+        bool operator<=(const Fixed& other) const;
+        bool operator==(const Fixed& other) const;
+        bool operator!=(const Fixed& other) const;
 
-        const Fixed operator+(const Fixed& other);
-        const Fixed operator-(const Fixed& other);
-        const Fixed operator*(const Fixed& other);
-        const Fixed operator/(const Fixed& other);
+        const Fixed operator+(const Fixed& other) const;
+        const Fixed operator-(const Fixed& other) const;
+        const Fixed operator*(const Fixed& other) const;
+        const Fixed operator/(const Fixed& other) const;
 
         const Fixed& operator++();
         const Fixed& operator--();

@@ -56,52 +56,52 @@ std::ostream& operator<<(std::ostream& out, const Fixed& fixed)
     return (out);
 }
 
-bool Fixed::operator>(const Fixed& other)
+bool Fixed::operator>(const Fixed& other) const
 {
     return (this->fixed_point_nb < other.fixed_point_nb);
 }
 
-bool Fixed::operator<(const Fixed& other)
+bool Fixed::operator<(const Fixed& other) const
 {
     return (this->fixed_point_nb < other.fixed_point_nb);
 }
 
-bool Fixed::operator>=(const Fixed& other)
+bool Fixed::operator>=(const Fixed& other) const
 {
     return (this->fixed_point_nb >= other.fixed_point_nb);
 }
 
-bool Fixed::operator<=(const Fixed& other)
+bool Fixed::operator<=(const Fixed& other) const
 {
     return (this->fixed_point_nb <= other.fixed_point_nb);
 }
 
-bool Fixed::operator==(const Fixed& other)
+bool Fixed::operator==(const Fixed& other) const
 {
     return (this->fixed_point_nb == other.fixed_point_nb);
 }
 
-bool Fixed::operator!=(const Fixed& other)
+bool Fixed::operator!=(const Fixed& other) const
 {
     return (this->fixed_point_nb != other.fixed_point_nb);
 }
 
-const Fixed Fixed::operator+(const Fixed& other)
+const Fixed Fixed::operator+(const Fixed& other) const
 {
     return (Fixed(this->toFloat() + other.toFloat()));
 }
 
-const Fixed Fixed::operator-(const Fixed& other)
+const Fixed Fixed::operator-(const Fixed& other) const
 {
     return (Fixed(this->toFloat() - other.toFloat()));
 }
 
-const Fixed Fixed::operator*(const Fixed& other)
+const Fixed Fixed::operator*(const Fixed& other) const
 {
     return (Fixed(this->toFloat() * other.toFloat()));
 }
 
-const Fixed Fixed::operator/(const Fixed& other)
+const Fixed Fixed::operator/(const Fixed& other) const
 {
     return (Fixed(this->toFloat() / other.toFloat()));
 }

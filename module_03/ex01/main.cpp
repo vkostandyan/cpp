@@ -1,25 +1,21 @@
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 int main()
 {
-    ClapTrap clapTrap1;
-    ClapTrap clapTrap2("ClapTrap1");
+    ClapTrap ClapTrapOne("ClapTrapOne");
+    ClapTrap ClapTrapTwo("ClapTrapTwo");
 
-    clapTrap2.attack("Target1");
-    clapTrap2.takeDamage(5);
-    clapTrap2.beRepaired(10);
+    // ClapTrapOne.attack("ClapTrapTwo");
+    // ClapTrapTwo.attack("ClapTrapOne");
 
-    ClapTrap clapTrap3 = clapTrap2;
-    ClapTrap clapTrap4;
+    ClapTrapOne.attack("ClapTrapTwo");
+    ClapTrapTwo.attack("ClapTrapOne");
 
-    clapTrap4 = clapTrap2;
+    ClapTrapOne.takeDamage(5);
+    ClapTrapTwo.takeDamage(3);
 
-    ScavTrap scavTrap1;
-    std::string name2 = "ScavTrap1";
-    ScavTrap scavTrap2(name2);
+    ClapTrapOne.beRepaired(3);
+    ClapTrapTwo.beRepaired(5);
 
-    scavTrap2.attack("Target2");
-    scavTrap2.guardGate();
-
-    return 0;
+    ClapTrapOne.attack("ClapTrapTwo");
 }

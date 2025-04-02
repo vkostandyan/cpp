@@ -22,7 +22,7 @@ public:
     void set_energy_points(int energy_points);
     int get_attack_damage() const;
     void set_attack_damage(int attack_damage);
-private:
+protected:
     std::string name;
     int health;
     int energy;

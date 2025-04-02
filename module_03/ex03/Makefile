@@ -1,6 +1,6 @@
 NAME = diamondtrap
 
-CPPFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow\
+CPPFLAGS = -Wall -Wextra -Werror #-Wshadow -Wno-shadow \
 	-std=c++98 #-fsanitize=address
 
 CPP = c++

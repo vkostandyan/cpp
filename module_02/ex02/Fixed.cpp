@@ -57,7 +57,7 @@ std::ostream& operator<<(std::ostream& out, const Fixed& fixed)
 
 bool Fixed::operator>(const Fixed& other) const
 {
-    return (this->fixed_point_nb < other.fixed_point_nb);
+    return (this->fixed_point_nb > other.fixed_point_nb);
 }
 
 bool Fixed::operator<(const Fixed& other) const

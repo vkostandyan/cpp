@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = bureaucrat
 
 CPPFLAGS = -Wall -Wextra -Werror \
 	-std=c++98 #-fsanitize=address
@@ -7,7 +7,7 @@ CPP = c++
 
 HEADERS =	Bureaucrat.hpp \
 
-SRCS =	Bureaucrat.hpp \
+SRCS =	Bureaucrat.cpp \
 		main.cpp \
 
 OBJ_DIR = objects/

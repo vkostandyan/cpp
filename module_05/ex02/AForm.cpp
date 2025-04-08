@@ -13,7 +13,7 @@ AForm::AForm(const std::string name, const bool isSigned, const int signGrade, c
 
 AForm::AForm(const AForm& rhs) : name(rhs.name), isSigned(rhs.isSigned), signGrade(rhs.signGrade), executeGrade(rhs.executeGrade)
 {
-    std::cout << "AForm copy constructor called" << std::endl;
+	std::cout << "AForm copy constructor called" << std::endl;
 }
 
 const AForm& AForm::operator=(const AForm& rhs)
@@ -31,7 +31,7 @@ const AForm& AForm::operator=(const AForm& rhs)
 
 AForm::~AForm()
 {
-    std::cout << "AForm destructor called" << std::endl;
+	std::cout << "AForm destructor called" << std::endl;
 }
 
 const char *AForm::GradeTooHighException::what() const throw()
@@ -44,13 +44,25 @@ const char *AForm::GradeTooLowException::what() const throw()
 	return "The grade cannot be lower than 150.";
 }
 
+const char* AForm::IsSignedException::what() const throw()
+{
+	return "The form is not signed!";
+}
+
 void AForm::beSigned(const Bureaucrat &b)
 {
 	if (b.getGrade() > this->signGrade)
-		throw AForm::GradeTooLowException();
+	throw AForm::GradeTooLowException();
 	this->isSigned = true;
 }
-
+void AForm::checkExecute(const Bureaucrat &executor) const
+{
+	if (!this->getSign())
+		throw AForm::IsSignedException();
+	else if (executor.getGrade() > this->executeGrade)
+		throw AForm::GradeTooLowException();
+}
+	
 const std::string &AForm::getName(void) const { return this->name; }
 
 bool AForm::getSign(void) const { return this->isSigned; }
@@ -58,11 +70,11 @@ bool AForm::getSign(void) const { return this->isSigned; }
 int AForm::getSignGrade(void) const { return this->signGrade; }
 
 int AForm::getExecuteGrade(void) const { return this->executeGrade; }
-
+	
 std::ostream&	operator<<(std::ostream& os, const AForm& ob)
 {
-    std::cout << "Name: " << ob.getName() << std::endl;
-    std::cout << "Is signed: " << ob.getSign() << std::endl;
+	std::cout << "Name: " << ob.getName() << std::endl;
+	std::cout << "Is signed: " << ob.getSign() << std::endl;
     std::cout << "Grade to sign: " << ob.getSignGrade() << std::endl;
     std::cout << "Grade to execute: " << ob.getExecuteGrade() << std::endl;
     return os;

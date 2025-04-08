@@ -1,4 +1,4 @@
-NAME = bureaucrat
+NAME = aform
 
 CPPFLAGS = -Wall -Wextra -Werror \
 	-std=c++98 #-fsanitize=address
@@ -6,11 +6,17 @@ CPPFLAGS = -Wall -Wextra -Werror \
 CPP = c++
 
 HEADERS =	Bureaucrat.hpp \
-			Form.hpp
+			AForm.hpp \
+			PresidentialPardonForm.hpp \
+			RobotomyRequestForm.hpp \
+			ShrubberyCreationForm.hpp
 
 SRCS =	Bureaucrat.cpp \
-		Form.cpp \
+		AForm.cpp \
 		main.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp
 
 OBJ_DIR = objects/
 

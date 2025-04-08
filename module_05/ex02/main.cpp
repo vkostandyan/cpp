@@ -1,14 +1,21 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-    Bureaucrat bureaucrat("John", 75);
-
-    Form form("form", 0, 100, 110);
-    Form form1(form);
-    bureaucrat.signForm(form);
-    bureaucrat.signForm(form1);
-	std::cout << bureaucrat;
-	std::cout << form1;
+	Bureaucrat ob("John", 110);
+	ShrubberyCreationForm form1;
+	RobotomyRequestForm form2;
+	PresidentialPardonForm form3;
+    std::cout << "Form1\n";
+	ob.signForm(form1);
+	ob.executeForm(form1);
+    std::cout << "Form2\n";
+    ob.signForm(form2);
+	ob.executeForm(form2);
+    std::cout << "Form3\n";
+    ob.signForm(form3);
+	ob.executeForm(form3);
 }

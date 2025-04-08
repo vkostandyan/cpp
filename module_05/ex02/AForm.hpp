@@ -12,13 +12,14 @@ public:
     AForm(const std::string, const bool, const int, const int);
     AForm(const AForm&);
     const AForm& operator=(const AForm&);
-    ~AForm();
+    virtual ~AForm();
 public:
     const std::string &getName(void) const;
     bool getSign() const;
     int getSignGrade() const;
     int getExecuteGrade() const;
     void beSigned(const Bureaucrat &);
+    void checkExecute(const Bureaucrat &) const;
 public:
     class GradeTooHighException : public std::exception
     {
@@ -30,6 +31,13 @@ public:
         public:
             const char* what() const throw();
     };
+    class IsSignedException : public std::exception 
+    {
+        public:
+            const char* what() const throw();
+    };
+protected:
+    virtual void execute(Bureaucrat const &executor) const = 0;
 private:
     const std::string   name;
     bool                isSigned;

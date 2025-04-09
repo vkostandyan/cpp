@@ -28,7 +28,7 @@ AMateria::~AMateria()
     std::cout << "AMateria destructor called" << std::cout;
 }
 
-virtual void AMateria::use(ICharacter& target)
+void AMateria::use(ICharacter& target)
 {
     std::cout << "AMateria use " << this->getType() << " on " << target.getName() << std::endl;
 }

@@ -1,11 +1,11 @@
 #include "Cure.hpp"
 
-Cure::Cure() : Amateria("cure")
+Cure::Cure() : AMateria("cure")
 {
     std::cout << "Cure default construtor called" << std::endl;
 }
 
-Cure::Cure(const std::string& type) : Amateria(type)
+Cure::Cure(const std::string& type) : AMateria(type)
 {
     std::cout << "Cure parameter construtor called" << std::endl;
 }
@@ -15,7 +15,7 @@ Cure::Cure(const Cure& rhs) : AMateria(rhs)
     std::cout << "Cure copy construtor called" << std::endl;
 }
 
-const Cure& operator=(const Cure& rhs)
+const Cure& Cure::operator=(const Cure& rhs)
 {
     std::cout << "Cure copy assignment operator called" << std::endl;
     if (&rhs != this)

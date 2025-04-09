@@ -44,7 +44,7 @@ const Character &Character::operator=(const Character &rhs)
 	return (*this);
 }
 
-Character::Character() : name("Unknown character")
+Character::~Character()
 {
     std::cout << "Character destructor called." << std::endl;
 	for (int i = 0; i < 4; ++i)

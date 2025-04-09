@@ -1,11 +1,11 @@
 #include "Ice.hpp"
 
-Ice::Ice() : Amateria("ice")
+Ice::Ice() : AMateria("ice")
 {
     std::cout << "Ice default construtor called" << std::endl;
 }
 
-Ice::Ice(const std::string& type) : Amateria(type)
+Ice::Ice(const std::string& type) : AMateria(type)
 {
     std::cout << "Ice parameter construtor called" << std::endl;
 }
@@ -15,7 +15,7 @@ Ice::Ice(const Ice& rhs) : AMateria(rhs)
     std::cout << "Ice copy construtor called" << std::endl;
 }
 
-const Ice& operator=(const Ice& rhs)
+const Ice& Ice::operator=(const Ice& rhs)
 {
     std::cout << "Ice copy assignment operator called" << std::endl;
     if (&rhs != this)

@@ -13,14 +13,12 @@ HEADERS =	Ice.hpp \
 			MateriaSource.hpp \
 			IMateriaSource.hpp \
 
-SRCS =	Ice.hpp \
+SRCS =	Ice.cpp \
 		main.cpp \
-		Cure.hpp \
-		AMateria.hpp \
-		Character.hpp \
-		ICharacter.hpp \
-		MateriaSource.hpp \
-		IMateriaSource.hpp \
+		Cure.cpp \
+		AMateria.cpp \
+		Character.cpp \
+		MateriaSource.cpp \
 
 OBJ_DIR = objects/
 

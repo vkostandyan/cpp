@@ -7,7 +7,7 @@ class Cure : public AMateria
 {
 public:
     Cure();
-    Cure(const std::string);
+    Cure(const std::string&);
     Cure(const Cure&);
     const Cure& operator=(const Cure&);
     ~Cure();

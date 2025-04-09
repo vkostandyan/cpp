@@ -19,7 +19,7 @@ int t_main()
 
 int main()
 {
-	t_main();
+	// t_main();
 	
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
@@ -27,6 +27,4 @@ int main()
 	delete i;
 
 	return 0;
-
-	// system("leaks Brain");
 }

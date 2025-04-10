@@ -25,7 +25,7 @@ const Cure& Cure::operator=(const Cure& rhs)
 
 Cure::~Cure()
 {
-    std::cout << "Cure destrutor called" << std::cout;
+    std::cout << "Cure destrutor called" << std::endl;
 }
 
 AMateria *Cure::clone() const

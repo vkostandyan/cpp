@@ -25,7 +25,7 @@ const Ice& Ice::operator=(const Ice& rhs)
 
 Ice::~Ice()
 {
-    std::cout << "Ice destrutor called" << std::cout;
+    std::cout << "Ice destrutor called" << std::endl;
 }
 
 AMateria *Ice::clone() const

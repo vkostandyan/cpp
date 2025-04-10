@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = AMateria
 
 CPPFLAGS = -Wall -Wextra -Werror \
 	-std=c++98 #-fsanitize=address

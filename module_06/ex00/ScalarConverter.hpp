@@ -18,7 +18,6 @@ private:
     static void printDouble(const std::string &);
     static void printError(void);
     static bool checkNumber(const std::string &);
-
 private:
     ScalarConverter();
     ScalarConverter(const ScalarConverter &);

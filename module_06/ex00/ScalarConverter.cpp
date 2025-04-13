@@ -10,26 +10,26 @@ ScalarConverter::~ScalarConverter() {}
 
 void ScalarConverter::printNan(void)
 {
-	std::cout << "Char: " << "impossible" << std::endl;
-	std::cout << "Int: " << "impossible" << std::endl;
-	std::cout << "Float: " << "nanf" << std::endl;
-	std::cout << "Double: " << "nan" << std::endl;
+	std::cout << "char: " << "impossible" << std::endl;
+	std::cout << "int: " << "impossible" << std::endl;
+	std::cout << "float: " << "nanf" << std::endl;
+	std::cout << "double: " << "nan" << std::endl;
 }
 
 void ScalarConverter::printInf(const std::string &str)
 {
-	std::cout << "Char: " << "impossible" << std::endl;
-	std::cout << "Int: " << "impossible" << std::endl;
-	std::cout << "Float: " << (str[0] == '-' ? "-" : "+") << "inff" << std::endl;
-	std::cout << "Double: " << (str[0] == '-' ? "-" : "+") << "inf" << std::endl;
+	std::cout << "char: " << "impossible" << std::endl;
+	std::cout << "int: " << "impossible" << std::endl;
+	std::cout << "float: " << (str[0] == '-' ? "-" : "+") << "inff" << std::endl;
+	std::cout << "double: " << (str[0] == '-' ? "-" : "+") << "inf" << std::endl;
 }
 
 void ScalarConverter::printError(void)
 {
-	std::cout << "Char: " << "impossible" << std::endl;
-	std::cout << "Int: " << "impossible" << std::endl;
-	std::cout << "Float: " << "impossible" << std::endl;
-	std::cout << "Double: " << "impossible" << std::endl;
+	std::cout << "char: " << "impossible" << std::endl;
+	std::cout << "int: " << "impossible" << std::endl;
+	std::cout << "float: " << "impossible" << std::endl;
+	std::cout << "double: " << "impossible" << std::endl;
 }
 
 bool ScalarConverter::checkNumber(const std::string &str)
@@ -65,7 +65,7 @@ bool ScalarConverter::checkNumber(const std::string &str)
 void ScalarConverter::printChar(const std::string &str)
 {
     char c = static_cast<char>(std::atoi(str.c_str()));
-    std::cout << "Char: ";
+    std::cout << "char: ";
 	if (c < 0)
 		std::cout << "impossible" << std::endl;
 	else if (c < 32 || c == 127)
@@ -76,13 +76,13 @@ void ScalarConverter::printChar(const std::string &str)
 
 void ScalarConverter::printInt(const std::string &str)
 {
-    std::cout << "Int: " << std::atoi(str.c_str()) << std::endl;
+    std::cout << "int: " << std::atoi(str.c_str()) << std::endl;
 }
 
 void ScalarConverter::printFloat(const std::string &str)
 {
     float res = std::strtof(str.c_str(), NULL);
-    std::cout << "Float: " << res;
+    std::cout << "float: " << res;
     if (res == static_cast<int>(res))
 		std::cout << ".0f" << std::endl;
 	else
@@ -92,7 +92,7 @@ void ScalarConverter::printFloat(const std::string &str)
 void ScalarConverter::printDouble(const std::string &str)
 {
 	double res = std::strtod(str.c_str(), NULL);
-	std::cout << "Double: " << res;
+	std::cout << "double: " << res;
 	if (res == static_cast<int>(res))
 		std::cout << ".0";
 	std::cout << std::endl;

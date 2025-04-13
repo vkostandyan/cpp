@@ -33,7 +33,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-// AForm::execute(executor) needs definition
+    AForm::checkExecute(executor);
     std::cout<<"Some drilling noices" << std::endl;
     if (rand() % 2)
 		std::cout << this->target << " has been robotomized successfully" << std::endl;

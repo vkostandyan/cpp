@@ -33,7 +33,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
-// AForm::execute(executor) needs definition
+    AForm::checkExecute(executor);
     std::ofstream outfile((this->target + "_shrubbery").c_str());
     if (outfile.is_open())
 	{

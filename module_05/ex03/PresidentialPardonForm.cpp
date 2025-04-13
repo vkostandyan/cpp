@@ -33,7 +33,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-// AForm::execute(executor) needs definition
+    AForm::checkExecute(executor);
     std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
     (void)executor;
 }

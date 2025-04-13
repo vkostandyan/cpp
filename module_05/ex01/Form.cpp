@@ -9,6 +9,8 @@ Form::Form(const std::string name, const bool isSigned, const int signGrade, con
                 name(name), isSigned(isSigned), signGrade(signGrade), executeGrade(executeGrade)
 {
     std::cout << "Form parameter constructor called" << std::endl;
+	validateGrade(signGrade);
+	validateGrade(executeGrade);
 }
 
 Form::Form(const Form& rhs) : name(rhs.name), isSigned(rhs.isSigned), signGrade(rhs.signGrade), executeGrade(rhs.executeGrade)
@@ -49,6 +51,14 @@ void Form::beSigned(const Bureaucrat &b)
 	if (b.getGrade() > this->signGrade)
 		throw Form::GradeTooLowException();
 	this->isSigned = true;
+}
+
+void Form::validateGrade(int grade)
+{
+	if (grade < 1)
+		throw Form::GradeTooHighException();
+	else if (grade > 150)
+		throw Form::GradeTooLowException();
 }
 
 const std::string &Form::getName(void) const { return this->name; }

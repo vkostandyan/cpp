@@ -5,7 +5,7 @@ int main()
 {
     Bureaucrat bureaucrat("John", 75);
 
-    Form form("form", 0, 100, 110);
+    Form form("form", 0, 15, 15);
     Form form1(form);
     bureaucrat.signForm(form);
     bureaucrat.signForm(form1);

@@ -49,3 +49,13 @@ int Span::shortestSpan() const
     }
     return minDiff;
 }
+
+void Span::fill()
+{
+    if (v.size() >= N)
+        return;
+
+    std::srand(std::time(0));
+    while (v.size() < N) 
+        v.push_back(std::rand());
+}

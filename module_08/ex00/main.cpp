@@ -1,16 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <list>
-#include <deque>
-#include <algorithm> // for std::find
+#include "easyfind.hpp"
 
-// easyfind template
-template <typename T>
-typename T::iterator easyfind(T &container, int value) {
-	return std::find(container.begin(), container.end(), value);
-}
-
-// run function from you
 template <typename T>
 void run(T &container, int value)
 {

@@ -49,6 +49,7 @@ void PmergeMe::fill(int argc, char *argv[])
 		deq.push_back(static_cast<int>(value));
 	}
 }
+
 template <typename T>
 void PmergeMe::sort(T &c)
 {
@@ -77,8 +78,8 @@ void PmergeMe::sort(T &c)
 	sort(a);
 	for (size_t i = 0; i < b.size(); i++)
 	{
-		typename T::iterator pos = std::lower_bound(a.begin(), a.end(), b[i]);
-		a.insert(pos, c[i]);
+	typename T::iterator pos = std::lower_bound(a.begin(), a.end(), b[i]);
+	a.insert(pos, b[i]);  // ✅ Correct: insert from b
 	}
 	if (hasOdd)
 	{

@@ -111,7 +111,7 @@ bool BitcoinExchange::isValidValue(const std::string &value)
 	ss >> num;
 	if (ss.fail() || !ss.eof())
 	{
-		std::cout << "Error: bad input" << std::endl;
+		std::cout << "Error: bad input1" << std::endl;
 		return false;
 	}
 	else if (num < 0)
@@ -151,7 +151,7 @@ void BitcoinExchange::exchange(const std::string &fname)
 		std::string value = trim(line.substr(pos + 1));
 		if (!isValidDate(date))
 		{
-			std::cout << "Error: invalid date format => " << date << std::endl;
+			std::cout << "Error: bad input => " << date << std::endl;
 			continue;
 		}
 		else if (!isValidValue(value))

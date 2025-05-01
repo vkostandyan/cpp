@@ -14,6 +14,6 @@ int main(int argc, char *argv[])
 		std::cout << res << std::endl;
 	} catch(std::runtime_error &e)
 	{
-		std::cerr<<e.what()<<std::endl;
+		std::cerr<<"Error"<<std::endl;
 	}
 }
